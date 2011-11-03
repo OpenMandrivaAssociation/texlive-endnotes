@@ -1,3 +1,9 @@
+# revision 17197
+# category Package
+# catalog-ctan /macros/latex/contrib/endnotes
+# catalog-date 2010-03-09 12:54:42 +0100
+# catalog-license lppl
+# catalog-version undef
 Name:		texlive-endnotes
 Version:	20100309
 Release:	1
@@ -38,6 +44,7 @@ document.
 %{_texmfdistdir}/tex/latex/endnotes/endnotes.sty
 %doc %{_texmfdistdir}/doc/latex/endnotes/endnotes.pdf
 %doc %{_texmfdistdir}/doc/latex/endnotes/endnotes.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -48,3 +55,5 @@ document.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
