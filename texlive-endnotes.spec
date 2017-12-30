@@ -5,8 +5,8 @@
 # catalog-license lppl
 # catalog-version undef
 Name:		texlive-endnotes
-Version:	20100309
-Release:	10
+Version:	20170414
+Release:	1
 Summary:	Place footnotes at the end
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/endnotes
