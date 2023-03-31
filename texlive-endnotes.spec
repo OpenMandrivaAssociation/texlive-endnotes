@@ -1,6 +1,6 @@
 Name:		texlive-endnotes
 Version:	53319
-Release:	1
+Release:	2
 Summary:	Place footnotes at the end
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/endnotes
