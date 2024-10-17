@@ -3,7 +3,7 @@ Version:	53319
 Release:	2
 Summary:	Place footnotes at the end
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/endnotes
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/endnotes
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/endnotes.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/endnotes.doc.r%{version}.tar.xz
