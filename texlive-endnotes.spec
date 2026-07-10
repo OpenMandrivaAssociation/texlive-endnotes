@@ -1,40 +1,23 @@
-Name:		texlive-endnotes
-Version:	53319
-Release:	2
+%global tl_name endnotes
+%global tl_revision 79461
+
+Name:		texlive-%{tl_name}
+Version:	%{tl_revision}
+Release:	1
 Summary:	Place footnotes at the end
 Group:		Publishing
 URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/endnotes
-License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/endnotes.r%{version}.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/endnotes.doc.r%{version}.tar.xz
+License:	lppl1.2
+Source0:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/endnotes.r%{tl_revision}.tar.xz
+Source1:	https://mirrors.ctan.org/systems/texlive/tlnet/archive/endnotes.doc.r%{tl_revision}.tar.xz
 BuildArch:	noarch
+BuildSystem:	texlive
 BuildRequires:	texlive-tlpkg
-Requires(pre):	texlive-tlpkg
-Requires(post):	texlive-kpathsea
+%texlive_base_requires
+Provides:	texlive(%{tl_name}) = %{tl_revision}
 
 %description
-Accumulates footnotes and places them at the end of the
-document.
+Accumulates notes (using the \endnote command, which can be used as a
+replacement for \footnote), and places them at the end of the section,
+chapter or document.
 
-%post
-%{_sbindir}/texlive.post
-
-%postun
-if [ $1 -eq 0 ]; then
-	%{_sbindir}/texlive.post
-fi
-
-#-----------------------------------------------------------------------
-%files
-%{_texmfdistdir}/tex/latex/endnotes
-%doc %{_texmfdistdir}/doc/latex/endnotes
-
-#-----------------------------------------------------------------------
-%prep
-%autosetup -p1 -c -a1
-
-%build
-
-%install
-mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar tex doc %{buildroot}%{_texmfdistdir}
